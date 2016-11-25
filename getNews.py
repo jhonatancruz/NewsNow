@@ -19,7 +19,7 @@ print("Top news:",soup.p.text) # returns top news in Tesla.com
 # for url in soup.p.text():
 #     print(soup.url)
 
-print(soup.find_all('div',class_='views-row-odd views-row-first blog-list-item'))
-
-for x in soup.find_all('div',class_='views-row-odd views-row-first blog-list-item'):
-    for
+# print(soup.find_all('div',class_='views-row-odd views-row-first blog-list-item'))
+#
+# for x in soup.find_all('div',class_='views-row-odd views-row-first blog-list-item'):
+#     for
