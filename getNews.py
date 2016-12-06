@@ -17,6 +17,8 @@ client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 client.messages.create(
     to="+1"+number,
     from_="+19088458499",
-    body= "Hey there!"
+    body= soup.p.text
     )
+
+#the following will ask what companies to grab info from 
     #media_url="https://c1.staticflickr.com/3/2899/14341091933_1e92e62d12_b.jpg",
