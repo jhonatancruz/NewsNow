@@ -44,7 +44,7 @@ AUTH_TOKEN = "5fc24bcb11f279efe7e608296bc74093"
 
 #ask for company
 company= input("What company?")
-sauce= urllib.request.urlopen('https://www.tesla.com/blog').read()
+sauce= requests.get('https://www.tesla.com/blog').read()
 soup= bs.BeautifulSoup(sauce,'lxml')
 
 
