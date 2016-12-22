@@ -1,5 +1,6 @@
 import bs4 as bs
 import urllib.request
+import requests
 from twilio import twiml
 from twilio.rest import TwilioRestClient
 
@@ -34,6 +35,15 @@ from twilio.rest import TwilioRestClient
 # # Now all calls to urllib.request.urlopen use our opener.
 # urllib.request.install_opener(opener)
 
+# auth_handler = urllib.request.HTTPBasicAuthHandler()
+# auth_handler.add_password(realm='none',
+#                           uri='https://www.twilio.com/login',
+#                           user='jcruz3@drew.edu',
+#                           passwd='')
+# opener = urllib.request.build_opener(auth_handler)
+# # ...and install it globally so it can be used with urlopen.
+# urllib.request.install_opener(opener)
+# urllib.request.urlopen('https://www.twilio.com/login')
 
 number= input("Give your number: ")
 
@@ -44,7 +54,7 @@ AUTH_TOKEN = "5fc24bcb11f279efe7e608296bc74093"
 
 #ask for company
 company= input("What company?")
-sauce= requests.get('https://www.tesla.com/blog').read()
+sauce= urllib.request.urlopen('https://www.tesla.com/blog').read()
 soup= bs.BeautifulSoup(sauce,'lxml')
 
 
