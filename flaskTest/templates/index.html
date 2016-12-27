@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NewsNow</title>
+<title>NewsNow</title>
+<link rel="stylesheet" type="text/css" href="static/styleNews.css">
 </head>
 <h1>NewsNow</h1>
 <form action="action_page.php">
@@ -13,11 +14,21 @@
     <input type="text" name="lastname" value=""><br>
     Phone Number:<br>
     <input type="numbers" name="phoneNumber" value=""><br><br>
-    <input type="submit" value="Submit">
-  </center></fieldset>
+    <button id="phone" onclick="goPressed()">Go</button>
+    <!-- <input type="submit" value="Go" > -->
+    </center>
+  </fieldset>
 </form>
 <body>
 <script>
+document.getElementById("phone").onclick = function() {
+  window.location.href = "http://www.google.com";
+}
+// function goPressed(){
+//   var number=document.getElementById("phone").value;
+//   alert(number);
+//   alert("pressed");
+// }
 </script>
 </body>
 <tail><center>Created by Jhonatan Cruz for The Fund</center></tail>
