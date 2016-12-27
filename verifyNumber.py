@@ -2,8 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 import time
 
-EMAIL=""
-PASSWORD=""
+EMAIL="jcruz3@drew.edu"
+PASSWORD=
 
 number= input("what is your number?")
 driver= webdriver.Chrome()
