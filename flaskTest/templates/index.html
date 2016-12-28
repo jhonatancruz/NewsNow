@@ -5,25 +5,28 @@
 <link rel="stylesheet" type="text/css" href="static/styleNews.css">
 </head>
 <h1>NewsNow</h1>
-<form action="action_page.php">
+<form method="POST" action="/">
   <fieldset>
     <legend>About You:</legend>
-    <center>First name:<br>
+    <!-- <center>First name:<br>
     <input type="text" name="firstname" value=""><br>
     Last name:<br>
-    <input type="text" name="lastname" value=""><br>
+    <input type="text" name="lastname" value=""><br> -->
     Phone Number:<br>
-    <input type="numbers" name="phoneNumber" value=""><br><br>
-    <button id="phone" onclick="goPressed()">Go</button>
-    <!-- <input type="submit" value="Go" > -->
+    <input type="number" id="numbers" name="phoneNumber" value=""><br>
+    <input type="submit" value="Go"><br>
     </center>
   </fieldset>
 </form>
 <body>
 <script>
-document.getElementById("phone").onclick = function() {
-  window.location.href = "http://www.google.com";
+function redirect(){
+var number= document.getElementById("numbers");
+alert(number.value)
+window.location.href = "https://127.0.0.1:5000/verify";
+return(number)
 }
+
 // function goPressed(){
 //   var number=document.getElementById("phone").value;
 //   alert(number);
