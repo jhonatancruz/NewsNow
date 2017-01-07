@@ -14,8 +14,13 @@ AUTH_TOKEN = "5fc24bcb11f279efe7e608296bc74093"
 
 #ask for company
 company= input("What company?")
-sauce= urllib.request.urlopen('https://www.tesla.com/blog').read()
-soup= bs.BeautifulSoup(sauce,'lxml')
+if input=="tesla":
+    sauce= urllib.request.urlopen('https://www.tesla.com/blog').read()
+    soup= bs.BeautifulSoup(sauce,'lxml')
+else:
+    sauce= urllib.request.urlopen('http://www-03.ibm.com/press/us/en/index.wss').read()
+    soup= bs.BeautifulSoup(sauce,'lxml')
+
 
 
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
