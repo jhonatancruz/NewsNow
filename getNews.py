@@ -13,14 +13,25 @@ AUTH_TOKEN = "5fc24bcb11f279efe7e608296bc74093"
 
 
 #ask for company
-company= input("What company?")
-if input=="tesla":
+company= input("What company?").lower()
+if company=="tesla":
     sauce= urllib.request.urlopen('https://www.tesla.com/blog').read()
     soup= bs.BeautifulSoup(sauce,'lxml')
-else:
-    sauce= urllib.request.urlopen('http://www-03.ibm.com/press/us/en/index.wss').read()
+elif company=="verizon":
+    sauce= urllib.request.urlopen('http://www.verizon.com/about/news').read()
     soup= bs.BeautifulSoup(sauce,'lxml')
-
+elif company=="apple":
+    sauce= urllib.request.urlopen('http://www.apple.com/newsroom/').read()
+    soup= bs.BeautifulSoup(sauce,'lxml')
+elif company=="samsung":
+    sauce= urllib.request.urlopen('https://news.samsung.com/us/').read()
+    soup= bs.BeautifulSoup(sauce,'lxml')
+elif company=="microsoft":
+    sauce= urllib.request.urlopen('http://news.microsoft.com/#sm.00zysa8e1ej9dds109q20m4ljtlni').read()
+    soup= bs.BeautifulSoup(sauce,'lxml')
+else:
+    print("Try Again")
+    company= input("What company?")
 
 
 client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
