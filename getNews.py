@@ -5,8 +5,8 @@ from twilio import twiml
 from twilio.rest import TwilioRestClient
 
 
-number= "9082677299"
 
+number= input("what is your number?")
 #verify phone number through phone call
 ACCOUNT_SID = "AC3bd3a69773f1ea33cb499e04597dcebe"
 AUTH_TOKEN = "5fc24bcb11f279efe7e608296bc74093"
