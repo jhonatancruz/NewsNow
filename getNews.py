@@ -29,6 +29,9 @@ elif company=="samsung":
 elif company=="microsoft":
     sauce= urllib.request.urlopen('http://news.microsoft.com/#sm.00zysa8e1ej9dds109q20m4ljtlni').read()
     soup= bs.BeautifulSoup(sauce,'lxml')
+elif company=="amazon":
+    sauce= urllib.request.urlopen('https://commaai.blogspot.com/').read()
+    soup= bs.BeautifulSoup(sauce,'lxml')
 else:
     print("Try Again")
     company= input("What company?")
