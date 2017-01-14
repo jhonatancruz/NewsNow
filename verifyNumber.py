@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 EMAIL="jcruz3@drew.edu"
-PASSWORD=
+PASSWORD=""
 
 number= input("what is your number?")
 driver= webdriver.Chrome()
