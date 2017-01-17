@@ -7,12 +7,26 @@ app= Flask(__name__)
 
 
 class verifying:
-    @app.route('/verify')
-    def verify(self, number):
-        EMAIL="jcruz3@drew.edu"
-        PASSWORD="Mebigunot1!"
 
-        self.number= first.phones()
+    @app.route("/", methods=["GET", "POST"])
+    def index(): #self,phones
+        return render_template("index.html")
+        # if request.method== "POST":
+        #     self.phones= request.form["phoneNumber"]
+        #     verify()
+        #     # return render_template("/verify")
+        # return render_template("/index.html")
+
+    def init(self, name):
+        self.number= number
+        self.name= name
+
+    @app.route('/verify')
+    def verify():
+        EMAIL="jcruz3@drew.edu"
+        PASSWORD=""
+
+        number=""
         # number= input("what is your number?")
         driver= webdriver.Chrome()
         driver.get("https://www.twilio.com/login")
@@ -36,18 +50,8 @@ class verifying:
         #callMe.click()
         time.sleep(2)
         veriCode= driver.find_element_by_class_name("text-danger")
-        # print("Put the following digits on your phone when they call:"+ veriCode.text)
+        print("Put the following digits on your phone when they call:"+ veriCode.text)
         driver.quit()
-
-    @app.route("/", methods=["GET", "POST"])
-    def index(self,phones):
-        if request.method== "POST":
-            self.phones= request.form["phoneNumber"]
-            verify()
-            # return render_template("/verify")
-
-        return render_template("/index.html")
-
 
 if __name__ =="__main__":
     app.run(debug=True)
