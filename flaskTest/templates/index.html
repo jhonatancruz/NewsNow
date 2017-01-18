@@ -14,32 +14,13 @@
 <form method="POST" action="/" class="form-signin">
         <h2 class="form-signin-heading"><center>NewsNow</center></h2>
         <label for="inputEmail" class="sr-only">Name</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Name" required="" autofocus="">
+        <input type="email" name="name" class="form-control" placeholder="Name" required="" autofocus="">
         <label for="inputPassword" class="sr-only">Phone Number</label>
-        <input type="number" name="phoneNumber" id="numbers" class="form-control" placeholder="Phone Number" required="">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Next</button>
+        <input type="number" name="phoneNumber" class="form-control" placeholder="Phone Number">
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="submit">Next</button>
       </form>
 </div>
-<script>
-function redirect(){
-var number= document.getElementById("numbers");
-alert(number.value)
-window.location.href = "https://127.0.0.1:5000/verify";
-return(number)
-}
-
-// function goPressed(){
-//   var number=document.getElementById("phone").value;
-//   alert(number);
-//   alert("pressed");
-// }
-</script>
 </body>
-<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+<!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 <tail><center>Created by Jhonatan Cruz for The Fund</center></tail>
 </html>
