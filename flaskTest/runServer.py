@@ -10,16 +10,12 @@ class verifying:
 
     @app.route("/", methods=["GET", "POST"])
     def index(): #self,phones
-        return render_template("index.html")
-        # if request.method== "POST":
-        #     self.phones= request.form["phoneNumber"]
-        #     verify()
-        #     # return render_template("/verify")
-        # return render_template("/index.html")
+        if request.method=="POST":
+            phone= request.form["phoneNumber"]
+            name= request.form["name"]
+            return render_template('nextPage.html', phone= phone, name=name )
 
-    def init(self, name):
-        self.number= number
-        self.name= name
+        return render_template("/index.html")
 
     @app.route('/verify')
     def verify():
