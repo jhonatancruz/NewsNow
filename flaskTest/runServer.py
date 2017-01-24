@@ -19,7 +19,7 @@ def index(): #self,phones
 
         #this is where the application logs into twilio
         EMAIL="jcruz3@drew.edu"
-        PASSWORD=""
+        PASSWORD="Mebigunot1!"
         global number
         number=phone
 
@@ -87,11 +87,6 @@ def verifyCompany():
         elif company=="microsoft":
             sauce= urllib.request.urlopen('http://news.microsoft.com/#sm.00zysa8e1ej9dds109q20m4ljtlni').read()
             soup= bs.BeautifulSoup(sauce,'lxml')
-        elif company=="commaai":
-            sauce= urllib.request.urlopen('https://commaai.blogspot.com/').read()
-            soup= bs.BeautifulSoup(sauce,'lxml')
-        else:
-            print("Try Again")
 
 
         client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
