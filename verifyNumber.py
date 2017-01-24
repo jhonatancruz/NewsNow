@@ -3,9 +3,9 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 EMAIL="jcruz3@drew.edu"
-PASSWORD=""
+PASSWORD="Mebigunot1!"
 
-number= input("what is your number?")
+number="9082677299" #input("what is your number?")
 driver= webdriver.Chrome()
 driver.get("https://www.twilio.com/login")
 
