@@ -53,7 +53,7 @@ def index(): #self,phones
 
         return render_template('nextPage.html', name=name, veriCode=veriCode )
 
-    return render_template("/index.html")
+    return render_template("/index1.html")
 
 @app.route("/pickCompany", methods=["GET", "POST"])
 def pickCompany():
